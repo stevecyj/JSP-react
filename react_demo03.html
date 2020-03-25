@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>進階jsx語法</title>
+    </head>
+    <body>
+        <div id="reactContainer"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script type="text/babel">
+            let names = ['jojo', '喬瑟夫喬斯達', '綠色法皇', '斑紋劍士', '蝴蝶忍', '空條承太郎'];
+            class HelloComponent extends React.Component {
+                render() {
+                    return (
+                        <div>
+                            {names.map(function(name) {
+                                return <div key={name}>Hello,{name}!</div>;
+                            })}
+                        </div>
+                    );
+                }
+            }
+            ReactDOM.render(<HelloComponent />, document.getElementById('reactContainer'));
+        </script>
+    </body>
+</html>

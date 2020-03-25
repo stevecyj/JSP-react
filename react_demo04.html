@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>進階jsx語法</title>
+    </head>
+    <body>
+        <div id="reactContainer"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script type="text/babel">
+            let arr = [<h1>jojo</h1>, <h3>繼國緣一</h3>, <h3>彌豆子</h3>, <h3>善逸</h3>, <h3>野豬突刺</h3>];
+            ReactDOM.render(<div>{arr}</div>, document.getElementById('reactContainer'));
+        </script>
+    </body>
+</html>
